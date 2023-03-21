@@ -2,7 +2,7 @@ FROM alpine:latest AS compile
 
 RUN apk update && apk add npm nodejs
 RUN npm install -g yarn
-WORKDIR /src
+WORKDIR /app
 COPY ./package*.json /app/
 RUN npm install
 COPY . /app/
