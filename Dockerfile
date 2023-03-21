@@ -9,7 +9,7 @@ COPY . /app/
 RUN yarn build
 
 FROM nginx:alpine
-COPY --from=compile /src/build/ /public/
+COPY --from=compile /app/build/ /public/
 WORKDIR /public
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 EXPOSE 80 443
