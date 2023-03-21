@@ -21,7 +21,7 @@ function App() {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const response = await axios.post("http://localhost:8080/companys", { inn: inputValue })
+      const response = await axios.post("http://inn.pupaproj.ru/companys", { inn: inputValue })
       // console.log(response.data.value)
       setAnswer(response.data.value)
     } catch (error) {
